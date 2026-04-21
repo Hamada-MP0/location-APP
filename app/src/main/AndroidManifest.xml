@@ -26,5 +26,7 @@
 
             </intent-filter>
            </activity>
+        <activity android:name=".GPSActivity" android:exported="false"/>
+        <activity android:name=".SensorActivity" android:exported="false"/>
     </application>
 </manifest>

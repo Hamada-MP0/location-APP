@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Online Location -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Online Location"
+            android:textColor="#111"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvOnlineLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Searching..."
+            android:textSize="15sp"
+            android:textColor="#333"
+            android:paddingBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Offline Location -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Offline Location"
+            android:textColor="#111"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvOfflineLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Searching..."
+            android:textSize="15sp"
+            android:textColor="#333"
+            android:paddingBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvDiff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Distance: Diff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1E88E5"
+            android:padding="13dp"
+            android:layout_marginBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Accelerometer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accelerometer Info"
+            android:textColor="#111"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvAccelInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading sensors..."
+            android:textSize="14sp"
+            android:textColor="#444"
+            android:paddingBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Satellites -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Satellites Info"
+            android:textColor="#111"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvSatellites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Looking for satellites..."
+            android:textSize="14sp"
+            android:textColor="#444"
+            android:paddingBottom="20dp"/>
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Home"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+</ScrollView>
