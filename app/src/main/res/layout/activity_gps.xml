@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Online Location -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,7 +34,6 @@
             android:background="#E0E0E0"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Offline Location -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -71,7 +69,6 @@
             android:background="#E0E0E0"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Accelerometer -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -96,7 +93,6 @@
             android:background="#E0E0E0"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Satellites -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

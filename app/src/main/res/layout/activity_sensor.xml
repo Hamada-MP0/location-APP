@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F7FA"
+    android:background="#FAFAFA"
     android:padding="16dp">
 
     <LinearLayout
@@ -10,82 +10,339 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Title -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Sensor Monitor"
-            android:textSize="24sp"
+            android:text="Accelerometer Readings"
+            android:textColor="#111"
             android:textStyle="bold"
-            android:textColor="#222"
+            android:textSize="18sp"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvAccelX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="X axis: --"
+            android:textSize="15sp"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/tvAccelY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Y axis: --"
+            android:textSize="15sp"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/tvAccelZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Z axis: --"
+            android:textSize="15sp"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/tvAccelMag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Magnitude: --"
+            android:textSize="15sp"
+            android:textColor="#333"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvMotionStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motion: STILL"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1E88E5"
+            android:padding="13dp"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Accelerometer Card -->
-        <LinearLayout
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gyroscope (Angular Velocity)"
+            android:textColor="#111"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvGyroPitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:background="@android:color/white"
-            android:layout_marginBottom="16dp"
-            android:elevation="4dp">
+            android:text="Pitch (X): --"
+            android:textSize="15sp"
+            android:textColor="#333"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Accelerometer"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#1E88E5"
-                android:layout_marginBottom="8dp"/>
-
-            <TextView
-                android:id="@+id/tvAccel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Waiting for data..."
-                android:textSize="16sp"
-                android:textColor="#444"/>
-        </LinearLayout>
-
-        <!-- Gyroscope Card -->
-        <LinearLayout
+        <TextView
+            android:id="@+id/tvGyroRoll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:background="@android:color/white"
-            android:elevation="4dp"
-            android:layout_marginBottom="20dp">
+            android:text="Roll  (Y): --"
+            android:textSize="15sp"
+            android:textColor="#333"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gyroscope"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#43A047"
-                android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/tvGyroYaw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yaw   (Z): --"
+            android:textSize="15sp"
+            android:textColor="#333"
+            android:paddingBottom="6dp"/>
 
-            <TextView
-                android:id="@+id/tvGyro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Waiting for data..."
-                android:textSize="16sp"
-                android:textColor="#444"/>
+        <TextView
+            android:id="@+id/tvGyroStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status: Stable"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1E88E5"
+            android:padding="13dp"
+            android:layout_marginBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Live Use Case Detector"
+            android:textColor="#111"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvUseCaseTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PHONE IS STILL"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1E88E5"
+            android:padding="13dp"/>
+
+        <TextView
+            android:id="@+id/tvUseCaseDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No significant movement detected"
+            android:textSize="14sp"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/tvUseCaseTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Try: walk, run, shake, or drop slightly"
+            android:textSize="13sp"
+            android:textColor="#888"
+            android:textStyle="italic"
+            android:paddingBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Sensor Info"
+            android:textColor="#111"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textSize="14sp"
+            android:textColor="#444"
+            android:paddingBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best Accelerometer Per Use Case"
+            android:textColor="#111"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="6dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Accident Detection" android:textSize="15sp" android:textStyle="bold"
+            android:textColor="#E65100"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Piezoresistive" android:textSize="14sp" android:textColor="#1A237E"
+            android:textStyle="italic"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Handles extreme crash G-forces. Used in airbags."
+            android:textSize="13sp" android:textColor="#555" android:layout_marginBottom="10dp"/>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#EEE" android:layout_marginBottom="10dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Walking Activity" android:textSize="15sp" android:textStyle="bold"
+            android:textColor="#E65100"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Capacitive MEMS" android:textSize="14sp" android:textColor="#1A237E"
+            android:textStyle="italic"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Sensitive to small rhythmic steps. Low power."
+            android:textSize="13sp" android:textColor="#555" android:layout_marginBottom="10dp"/>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#EEE" android:layout_marginBottom="10dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Stepping Over Stairs" android:textSize="15sp" android:textStyle="bold"
+            android:textColor="#E65100"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Capacitive MEMS" android:textSize="14sp" android:textColor="#1A237E"
+            android:textStyle="italic"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Detects vertical lift + forward motion on all 3 axes."
+            android:textSize="13sp" android:textColor="#555" android:layout_marginBottom="10dp"/>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#EEE" android:layout_marginBottom="10dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Dropping the Phone" android:textSize="15sp" android:textStyle="bold"
+            android:textColor="#E65100"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Piezoelectric" android:textSize="14sp" android:textColor="#1A237E"
+            android:textStyle="italic"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Detects free fall + sudden impact in microseconds."
+            android:textSize="13sp" android:textColor="#555" android:layout_marginBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All Accelerometer Types Compared"
+            android:textColor="#111"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingBottom="12dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="10dp">
+            <TextView android:layout_width="30dp" android:layout_height="wrap_content"
+                android:text="1" android:textSize="18sp" android:textStyle="bold"
+                android:textColor="#43A047"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Piezoelectric" android:textSize="15sp" android:textStyle="bold"
+                    android:textColor="#1A237E"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Best for: Vibration, drop impact" android:textSize="13sp" android:textColor="#555"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Used in: Industrial sensors" android:textSize="13sp" android:textColor="#555"/>
+            </LinearLayout>
         </LinearLayout>
 
-        <!-- Back Button -->
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#EEE" android:layout_marginBottom="10dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="10dp">
+            <TextView android:layout_width="30dp" android:layout_height="wrap_content"
+                android:text="2" android:textSize="18sp" android:textStyle="bold"
+                android:textColor="#43A047"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Piezoresistive" android:textSize="15sp" android:textStyle="bold"
+                    android:textColor="#1A237E"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Best for: Crash detection, airbags" android:textSize="13sp" android:textColor="#555"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Used in: Automotive &amp; medical" android:textSize="13sp" android:textColor="#555"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#EEE" android:layout_marginBottom="10dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="10dp">
+            <TextView android:layout_width="30dp" android:layout_height="wrap_content"
+                android:text="3" android:textSize="18sp" android:textStyle="bold"
+                android:textColor="#43A047"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Capacitive MEMS ✓" android:textSize="15sp" android:textStyle="bold"
+                    android:textColor="#1A237E"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Best for: Walking, stairs, phone motion" android:textSize="13sp" android:textColor="#555"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Used in: All modern smartphones" android:textSize="13sp" android:textColor="#555"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#EEE" android:layout_marginBottom="10dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="20dp">
+            <TextView android:layout_width="30dp" android:layout_height="wrap_content"
+                android:text="4" android:textSize="18sp" android:textStyle="bold"
+                android:textColor="#43A047"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Thermal (Heat-based)" android:textSize="15sp" android:textStyle="bold"
+                    android:textColor="#1A237E"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Best for: Low power tilt sensing" android:textSize="13sp" android:textColor="#555"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Used in: IoT devices &amp; toys" android:textSize="13sp" android:textColor="#555"/>
+            </LinearLayout>
+        </LinearLayout>
+
         <Button
             android:id="@+id/btnBack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="⬅ Back to Home"
-            android:textSize="16sp"
-            android:textColor="#fff"
-            android:backgroundTint="#1E88E5"
-            android:padding="12dp"/>
+            android:text="Back to Home"
+            android:layout_marginBottom="20dp"/>
 
     </LinearLayout>
 </ScrollView>
